@@ -1,30 +1,28 @@
-# loginbot
+#############################################################################################
+
+# Login Bot
 # https://mashable.com/article/mschf-password-of-the-day-treasure-hunt/
 
 import webbot
 
 #############################################################################################
 
-username = 'random@email.com'
+"""
+Enter your given email or username and password into their fields.
 
-password = 'password!'
+The bot will test these logins automatically on each site.
+
+In the command line, it will output 'Site: Incorrect' or 'Site: Possibly Correct'.
+
+If it says possibly correct, you can visit the site yourself and check for a
+successful login.
+"""
+
+USERNAME = 'random@email.com'
+
+PASSWORD = 'password!'
 
 #############################################################################################
-
-"""
-Enter your email/username into the above fields.
-
-Each function will try your given username and password in the website
-and print "incorrect" or "possibly correct"
-
-Site functions:
-	Facebook
-	Hulu
-	Amazon Prime
-	Chase Bank
-	Spotify
-	Pandora
-"""
 
 def facebook(username, password):
 
@@ -38,15 +36,15 @@ def facebook(username, password):
 
 	web = webbot.Browser()
 
-	web.go_to('facebook.com/login')							# go to the website
-	web.type(username , into = 'Email' or 'Username')		# enter the username into correct place
-	web.type(password , into = 'Password')					# enter password into correct place
-	web.click('Log In')										# click the login button
+	web.go_to('facebook.com/login')                         # go to the website
+	web.type(username , into = 'Email' or 'Username')       # enter the username into correct place
+	web.type(password , into = 'Password')                  # enter password into correct place
+	web.click('Log In')                                     # click the login button
 
 	if web.exists('Email' or 'Username') == True:         # if it does work..
-		print('Incorrect: Facebook')		   			  # print possibly correct
-	else:											      # if it doesn't work..
-		print('Correct: Facebook')			              # print incorrect
+		print('Incorrect: Facebook')                      # print possibly correct
+	else:                                                 # if it doesn't work..
+		print('Correct: Facebook')                        # print incorrect
 
 def hulu(username, password):
 
@@ -59,15 +57,15 @@ def hulu(username, password):
 	"""
 	web = webbot.Browser()
 
-	web.go_to('hulu.com/login')							    # go to the website
-	web.type(username , into = 'Email' or 'Username')		# enter the username into correct place
-	web.type(password , into = 'Password')	   				# enter password into correct place
-	web.click('Log In')										# click the login button
+	web.go_to('hulu.com/login')                             # go to the website
+	web.type(username , into = 'Email' or 'Username')       # enter the username into correct place
+	web.type(password , into = 'Password')                  # enter password into correct place
+	web.click('Log In')                                     # click the login button
 
 	if web.exists('Email') == True:         # if it does work..
-		print('Incorrect: Hulu')		   	# print possibly correct
-	else:									# if it doesn't work..
-		print('Correct: Hulu')			    # print incorrect
+		print('Incorrect: Hulu')            # print possibly correct
+	else:                                   # if it doesn't work..
+		print('Correct: Hulu')              # print incorrect
 
 def prime(username, password):
 
@@ -78,6 +76,7 @@ def prime(username, password):
 		username(str) - username/email for given account
 		password(str) - password for given account
 	"""
+	#todo
 	return
 
 def chase(username, password):
@@ -89,6 +88,7 @@ def chase(username, password):
 		username(str) - username/email for given account
 		password(str) - password for given account
 	"""
+	#todo
 	return
 
 def spotify(username, password):
@@ -100,6 +100,7 @@ def spotify(username, password):
 		username(str) - username/email for given account
 		password(str) - password for given account
 	"""
+	#todo
 	return
 
 def pandora(username, password):
@@ -111,18 +112,19 @@ def pandora(username, password):
 		username(str) - username/email for given account
 		password(str) - password for given account
 	"""
+	#todo
 	return
 
 #############################################################################################
 
 # Websites to test
 
-#facebook(username, password)
-hulu(username, password)
-#prime(username, password)
-#chase(username, password)
-#spotify(username, password)
-#pandora(username, password)
+facebook(USERNAME, PASSWORD)
+hulu(USERNAME, PASSWORD)
+#prime(USERNAME, PASSWORD)
+#chase(USERNAME, PASSWORD)
+#spotify(USERNAME, PASSWORD)
+#pandora(USERNAME, PASSWORD)
 
 #############################################################################################
 
