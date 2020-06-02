@@ -1,12 +1,13 @@
 # loginbot
+# https://mashable.com/article/mschf-password-of-the-day-treasure-hunt/
 
 import webbot
 
 #############################################################################################
 
-username = 'ollie55589@gmail.com'
+username = 'random@email.com'
 
-password = '3j3e3m7c'
+password = 'password!'
 
 #############################################################################################
 
